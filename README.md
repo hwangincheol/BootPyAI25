@@ -23,3 +23,6 @@
 4. FastAPI 서버 실행
    - main.py 실행
    - Terminal에서 D:\pythonWorkSpace> uvicorn main:app --reload --port 8001 (위치확인)
+   
+<br>
+![image](https://github.com/user-attachments/assets/90bf0325-a676-412e-ba00-8ce6609a3e63)
