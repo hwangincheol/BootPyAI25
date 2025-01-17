@@ -17,7 +17,7 @@
    
    - FastAPI와 ASGI
    
-      FastAPI는 ASGI 표준을 따르는 웹 프레임 워크임
+      FastAPI는 ASGI 표준을 따르는 웹 프레임 워크임 <br>
       FastAPI 애플리케이션은 비동기 처리를 기본으로 하며, Uvicorn과 같은 ASGI 서버를 사용하여 높은 성능을 제공
 
 4. FastAPI 서버 실행
