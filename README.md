@@ -9,7 +9,7 @@
 
 3. FastAPI 설치 : pip install fastapi uvicorn uvicorn : ASGI(Asynchronus Server Gateway Interface)는 파이썬에서 비동기 웹서버와 웹 애플케이션 간의 인터페이스 표준 ASGI는 기존 WSGI(Web Server Gateway Interface)의 비동기 버전으로, 파이썬에서 비동기 처리를 지원하는 웹 애플리케이션을 구축하기 위함 https://velog.io/@hwaya2828/WSGI-ASGI
 
-ASGI 특징
+   ASGI 특징
 
 비동기 지원 : ASGI는 비동기 코드 실행을 지원하며 높은 성능과 동시성을 제공, 웹소켓이나 서버 푸시와 같은 비동기 통신이 필요한 애플리케이션에 유용
 범용성 : HTTP뿐만 아니라, WebSocket, gRPC와 같은 다른 프로토콜로 지원
