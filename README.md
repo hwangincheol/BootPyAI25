@@ -1,6 +1,8 @@
 # BootPyAI25
 스프링부트와 파이썬 AI 협업모듈
 
+https://wikidocs.net/book/8531
+
 ## 개발환경구축
 
 1. 파이썬 인터프리터 : http://www.python.org/ -> 3.12버전 설치(3.8이상필수)
