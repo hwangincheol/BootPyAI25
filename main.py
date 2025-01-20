@@ -45,6 +45,6 @@ async def read_root():
 @app.get("/items/{item_id}") # http://ip주소:포트/items/1
 async def read_item(item_id : int, q : str = None):
     return {"item_id" : item_id, "q" : q}
-    # item_id : 상품의 번호 -> 경로 매개변수
+    # item_id : 상품의 번호 -> 경로 매개변수 
     # q : 쿼리 매개변수 (기본값 none)
 
