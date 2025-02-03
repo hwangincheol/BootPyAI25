@@ -3,6 +3,11 @@
 
 https://wikidocs.net/book/8531
 
+## 실시간 영상 스트리밍 서비스
+
+![Uploading image.png…]()
+
+
 ## 개발환경구축
 
 1. 파이썬 인터프리터 : http://www.python.org/ -> 3.12버전 설치(3.8이상필수)
