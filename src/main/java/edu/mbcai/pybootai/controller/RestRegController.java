@@ -16,32 +16,32 @@ public class RestRegController {
     @Autowired  // 생성자 자동 주입(객체 사용)
     private WebClient webClient;    // 방금 생성한 config 컨트롤러 객체 생성
 
+    // @PostMapping("/java_service")
+    // public String serviceRequest(@RequestParam("file") MultipartFile file, @RequestParam("message") String message) {
+    //     // 파일 처리 코드
+    //     try {
+    //         System.out.println("Received file: " + file.getOriginalFilename());
+
+    //         // AI 서버로 이미지 전송
+    //         MultipartBodyBuilder bodyBuilder = new MultipartBodyBuilder();  // 멀티파트 폼 데이터를 구성
+    //         bodyBuilder.part("message", message);  // 메시지 추가
+    //         bodyBuilder.part("file", file.getResource());  // 받은 파일 추가
+
+    //         String result = webClient.post().uri("/detect")   // AI 서버의 /detect 엔드포인트로 요청
+    //                 .contentType(MediaType.MULTIPART_FORM_DATA) // 파일 전송에 맞는 콘텐츠 타입 설정
+    //                 .body(BodyInserters.fromMultipartData(bodyBuilder.build()))  // 폼 데이터 요청 본문에 설정
+    //                 .retrieve()  // 요청 실행
+    //                 .bodyToMono(String.class)   // 응답 본문을 String으로 변환
+    //                 .block();  // 비동기 처리 결과를 동기적으로 기다림
+
+    //         return result;  // AI 서버의 결과 반환
+    //     } catch (Exception e) {
+    //         e.printStackTrace();
+    //         return "{\"error\":\"File processing failed.\"}";
+    //     }
+    // }
+
     @PostMapping("/java_service")
-    public String serviceRequest(@RequestParam("file") MultipartFile file, @RequestParam("message") String message) {
-        // 파일 처리 코드
-        try {
-            System.out.println("Received file: " + file.getOriginalFilename());
-
-            // AI 서버로 이미지 전송
-            MultipartBodyBuilder bodyBuilder = new MultipartBodyBuilder();  // 멀티파트 폼 데이터를 구성
-            bodyBuilder.part("message", message);  // 메시지 추가
-            bodyBuilder.part("file", file.getResource());  // 받은 파일 추가
-
-            String result = webClient.post().uri("/detect")   // AI 서버의 /detect 엔드포인트로 요청
-                    .contentType(MediaType.MULTIPART_FORM_DATA) // 파일 전송에 맞는 콘텐츠 타입 설정
-                    .body(BodyInserters.fromMultipartData(bodyBuilder.build()))  // 폼 데이터 요청 본문에 설정
-                    .retrieve()  // 요청 실행
-                    .bodyToMono(String.class)   // 응답 본문을 String으로 변환
-                    .block();  // 비동기 처리 결과를 동기적으로 기다림
-
-            return result;  // AI 서버의 결과 반환
-        } catch (Exception e) {
-            e.printStackTrace();
-            return "{\"error\":\"File processing failed.\"}";
-        }
-    }
-
-    /*@PostMapping("/java_service")
     public String serviceRequest(MultipartFile file, String message) {
 
         MultipartBodyBuilder bodyBuilder = new MultipartBodyBuilder();  // 멀티파트 폼 데이터를 구성
@@ -56,7 +56,7 @@ public class RestRegController {
                 .block();   //비동기처리를 동기적으로 블록해서 결과를 반환
 
         return result;
-    }   // http://localhost:80/java_service 요청 post 처리*/
+    }   // http://localhost:80/java_service 요청 post 처리
 
     // 1. 자바 rest 컨트롤러로 텍스트와 이미지를 비동기 방식으로 전송
     // 2. ai 서버에서 이미지를 받아 객체 탐지를 수행
